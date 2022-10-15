@@ -113,7 +113,7 @@
                         <div class="listed">
                             <div class="row">
                                 <div class="filters">
-                                <h4>Companias</h4>
+                                <h4>Pacientes</h4>
                                     <ul class="list-unstyled">
                                         <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="highest to lowest"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></li>
                                         <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="lowest to highest"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></li>

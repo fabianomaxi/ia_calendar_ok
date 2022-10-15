@@ -120,50 +120,81 @@
                     <div class="register-form edit-account">
 
                         <div class="form-login">
-                            <form action="/save_times" method="POST" id="form_times" name="form_times">
+                            <form action="/save_patient" method="POST" id="form_patient" name="form_patient">
                                 @csrf
                                 <!--Personal Information-->
                                 <div class="row">
 
-                                <h3>Cadastro</h3>
-                                <hr>
-                                <div class="datapos">
+                                    <h3>Cadastro</h3>
+                                    <hr>
+                                    <div class="datapos">
 
-                                        <!--day-->
-                                            <input name="day" id="day" type="date" placeholder="Dia">
-                                        <!--day-->
+                                        <!--name-->
+                                            <input name="name" id="name" type="text" placeholder="Nome">
+                                        <!--name-->
 
-                                        <!--start_time-->
-                                            <input name="start_time" id="start_time" type="time" placeholder="Hora de início">
-                                        <!--start_time-->
+                                        <!--birthdate-->
+                                        <input name="birthdate" id="birthdate" type="date" placeholder="data de nascimento">
+                                        <!--birthdate-->
 
-                                        <select name="id_company" id="id_company">
-                                            <option value="2">Compania</option>
-                                            <option value="4">Compania1</option>
+
+                                        <!--gender-->
+                                        <select name="gender" id="gender">
+                                          <option value="F">Feminino</option>
+                                          <option value="M">Masculino</option>
                                         </select>
-                                    
+                                        <!--gender-->
+
+                                        
+                                        <!--cep-->
+                                        <input name="cep" id="cep" type="cep" placeholder="cep">
+                                        <!--cep-->
+
+                                        <!--street-->
+                                        <input name="street" id="street" type="text" placeholder="Rua">
+                                        <!--street-->
+
+                                        <!--user_registration-->  
+                                          <input name="user_registration" id="user_registration" type="number" placeholder="Registro de usuário">
+                                        <!--user_registration-->
+
                                 </div>
 
                                     <div class="datapos">           
 
-                                        <!--end_time-->
-                                            <input name="end_time" id="end_time" type="time" placeholder="Fim do tempo">
-                                        <!--end_time-->
+                                      <!--Email-->
+                                      <input name="email" id="email" type="mail" placeholder="Email">
+                                      <!--Email-->
                                       
-                                        <!--interval-->
-                                            <input name="interval" id="interval" type="number" placeholder="Intervalo">
-                                        <!--interval-->
+                                    <!--phone-->
+                                        <input name="phone_number" id="phone_number" type="number" placeholder="Telefone">
+                                    <!--phone-->
 
-                                        <select name="id_professionals" id="id_professionals">
-                                            <option>Profissional</option>
-                                            <option value="1">Profissional1</option>
-                                        </select>
+                                    <!--district-->  
+                                      <input name="district" id="district" type="text" placeholder="Distrito">
+                                    <!--district-->  
+
+                                    <!--state-->  
+                                      <input name="state" id="state" type="text" placeholder="Estado">
+                                    <!--state-->
+
+                                    <!--city-->  
+                                    <input name="city" id="city" type="text" placeholder="Cidade">
+                                    <!--city-->
+
+                                    <!--country-->  
+                                    <input name="country" id="country" type="text" placeholder="Pais">
+                                    <!--country-->
+
+                                    <select name="id_company" id="id_company">
+                                        <option value="3">Compania1</option>
+                                    </select>
 
                                     </div>
                                                                             
                                 </div>
                                 <!--Personal Information-->
-                                <button id="btn_times" name="btn_times" class="btn btn-default">Cadastrar</button>
+                                <button name="btn_patient" id="btn_patient" class="btn btn-default">Cadastrar</button>
 
                             </form>
 

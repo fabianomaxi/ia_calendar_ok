@@ -27,35 +27,44 @@ Route::get('/exit', 'App\Http\Controllers\UsersController@exit');
 # usuarios
 Route::get('/view_users', 'App\Http\Controllers\UsersController@view');
 Route::get('/show_users', 'App\Http\Controllers\UsersController@show');
+Route::post('/save_users', 'App\Http\Controllers\UsersController@save');
 
 # officies
 Route::get('/view_officies', 'App\Http\Controllers\OfficiesController@view');
-Route::get('/show_office', 'App\Http\Controllers\OfficiesController@show');
+Route::get('/show_officies', 'App\Http\Controllers\OfficiesController@show');
+Route::post('/save_officies', 'App\Http\Controllers\OfficiesController@saveOfficies');
 
 # companies
 Route::get('/view_companies', 'App\Http\Controllers\CompaniesController@view');
-Route::get('/show_company', 'App\Http\Controllers\CompaniesController@show');
+Route::get('/show_companies', 'App\Http\Controllers\CompaniesController@show');
+Route::post('/save_companies', 'App\Http\Controllers\CompaniesController@saveCompanies');
 
 # times
 Route::get('/view_times', 'App\Http\Controllers\TimesController@view');
-Route::get('/show_time', 'App\Http\Controllers\TimesController@show');
+Route::get('/show_times', 'App\Http\Controllers\TimesController@show');
+Route::post('/save_times', 'App\Http\Controllers\TimesController@saveTimes');
 
 # professionals
 Route::get('/view_professionals', 'App\Http\Controllers\ProfessionalsController@view');
-Route::get('/show_professional', 'App\Http\Controllers\ProfessionalsController@show');
+Route::get('/show_professionals', 'App\Http\Controllers\ProfessionalsController@show');
+Route::post('/save_professionals', 'App\Http\Controllers\ProfessionalsController@saveProfessionals');
 
 # specialties
 Route::get('/view_specialties', 'App\Http\Controllers\SpecialtiesController@view');
-Route::get('/show_specialty', 'App\Http\Controllers\SpecialtiesController@show');
+Route::get('/show_specialties', 'App\Http\Controllers\SpecialtiesController@show');
+Route::post('/save_specialties', 'App\Http\Controllers\SpecialtiesController@saveSpecialties');
 
 # patients
-Route::get('/view_patients', 'App\Http\Controllers\PatientsController@view');
+Route::get('/view_patient', 'App\Http\Controllers\PatientsController@view');
 Route::get('/show_patient', 'App\Http\Controllers\PatientsController@show');
+Route::post('/save_patient', 'App\Http\Controllers\PatientsController@savePatient');
 
 # holidays
 Route::get('/view_holidays', 'App\Http\Controllers\HolidaysController@view');
-Route::get('/show_holiday', 'App\Http\Controllers\HolidaysController@show');
+Route::get('/show_holidays', 'App\Http\Controllers\HolidaysController@show');
+Route::post('/save_holidays', 'App\Http\Controllers\HolidaysController@saveHolidays');
 
 # companyPatients
-Route::get('/view_companyPatients', 'App\Http\Controllers\CompanyPatientsController@view');
-Route::get('/show_companyPatient', 'App\Http\Controllers\CompanyPatientsController@show');
+Route::get('/view_companyPatient', 'App\Http\Controllers\CompanyPatientController@view');
+Route::get('/show_companyPatient', 'App\Http\Controllers\CompanyPatientController@show');
+Route::post('/save_companyPatient', 'App\Http\Controllers\CompanyPatientController@save');
