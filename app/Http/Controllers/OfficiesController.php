@@ -16,13 +16,13 @@ class OfficiesController extends Controller
 
         return view('/officies/list');
     }
-
+ 
     public function show()
     {
         return view('/officies/form');
     }
 
- 
+
     public function saveOfficies(Request $request)
     {
         $saveOfficies = Officies::create($request->all());
