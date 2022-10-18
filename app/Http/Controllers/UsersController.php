@@ -36,12 +36,23 @@ class UsersController extends Controller
 
     public function view()
     {
-        return view('/users/list');
+        $users = Users::all();
+
+        return view('/users/list',['users' => $users]);
+        
     }
 
     public function show()
     {
         return view('/users/form');
+    }
+
+    public function saveUsers(Request $request)
+    {
+        $saveUsers = Users::create($request->all());
+
+        return redirect('/view_users');
+
     }
 
 }

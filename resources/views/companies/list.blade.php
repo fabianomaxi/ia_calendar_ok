@@ -125,35 +125,31 @@
                                             </select>
                                         </li>
                                         <span class="sla">
-                                          <a class="btn btn-green btn-small" href="#">Novo Cadastro</a>
+                                          <a class="btn btn-green btn-small" href="show_companies">Novo Cadastro</a>
                                         </span>  
                                     </ul>
                                   </div>
                               </div>
 
-
-
+                        @foreach ($companies as $companies)
                             <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>oiiiiiiiiiiiiiiiiiioooooooooooo</p>
-                                    </div>
+                            <!--Item-->
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$companies->name}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
-
-                            <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>CHAMAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-                                    </div>
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$companies->email}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
-                        </div>
+                            <!--Item-->
+                            </div>            
+                        @endforeach
+                        
 
+                            
                         <!--Aside-->
                         <aside>
                             <div class="elements-aside gray-color">

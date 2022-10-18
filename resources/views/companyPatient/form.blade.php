@@ -38,7 +38,7 @@
                                         <ul class="drop-down one-column hover-fade">
                                             <li> <a href="/view_companies">Companias</a> </li>
                                             <li> <a href="/view_users">Usuarios</a> </li>
-                                            <li> <a href="/view_patient">Pacientes</a> </li>
+                                            <li> <a href="/view_patients">Pacientes</a> </li>
                                             <li> <a href="/view_professionals">Profissionais</a> </li>
                                             <li> <a href="/view_specialties">Especialidades</a> </li>
                                             <li> <a href="/view_officies">Escritorio</a> </li>
@@ -120,46 +120,35 @@
                     <div class="register-form edit-account">
 
                         <div class="form-login">
-                            <form action="/save_users" method="POST" id="form_users" name="form_users">
+                            <form action="/save_companyPatient" method="POST" id="form_companyPatient" name="form_companyPatient">
                                 @csrf
                                 <!--Personal Information-->
                                 <div class="row">
 
-                                <h3>Cadastro</h3>
-                                <hr>
-                                <div class="datapos">
+                                    <h3>Cadastro</h3>
+                                    <hr>
+                                    <div class="datapos">
 
-                                        <!--name-->
-                                            <input name="name" id="name" type="text" placeholder="Nome">
-                                        <!--name-->
-
-                                        <!--email-->
-                                            <input name="email" id="email" type="email" placeholder="email">
-                                        <!--email-->
-
-                                        <select name="id_company" id="id_company">
-                                            <option value="2">Compania</option>
-                                            <option value="1">Compania1</option>
-                                        </select>
+                                    <select name="id_company" id="id_company">
+                                        <option value="2">Compania1</option>
+                                        <option value="1">Compania2</option>
+                                    </select>
                                     
                                 </div>
 
                                     <div class="datapos">           
 
-                                        <!--password-->
-                                            <input name="password" id="password" type="password" placeholder="Senha">
-                                        <!--password-->
-
-                                        <select name="id_professionals" id="id_professionals">
-                                            <option value="1">Profissional1</option>
-                                            <option value="2">Profissional2</option>
+                                        <select name="id_patient" id="id_patient">
+                                            <option value="1">Pacientes1</option>
+                                            <option value="2">Pacientes2</option>
                                         </select>
 
                                     </div>
                                                                             
                                 </div>
+                                
                                 <!--Personal Information-->
-                                <button id="btn_users" name="btn_users" class="btn btn-default">Cadastrar</button>
+                                <button id="btn_companyPatient" name="btn_companyPatient" class="btn btn-default">Cadastrar</button>
 
                             </form>
 

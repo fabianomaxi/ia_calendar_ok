@@ -9,12 +9,9 @@ class TimesController extends Controller
 {
     public function view()
     {
-        $tempo = Times::all();
+        $times = Times::all();
 
-        // print_r($tempo);
-        // exit;
-
-        return view('/times/list');
+        return view('/times/list',['times' => $times]);
     }
 
     public function show()
@@ -26,8 +23,8 @@ class TimesController extends Controller
     {
         $saveTimes = Times::create($request->all());
 
-        print_r( $request->all() );
-        print_r($saveTimes);
+        return redirect('/view_times');
+
     }
 
 }

@@ -9,12 +9,9 @@ class OfficiesController extends Controller
 {
     public function view()
     {
-        $escritorio = Officies::all();
+        $officies = Officies::all();
 
-        // print_r($escritorio);
-        // exit;
-
-        return view('/officies/list');
+        return view('/officies/list',['officies' => $officies]);
     }
  
     public function show()
@@ -27,8 +24,7 @@ class OfficiesController extends Controller
     {
         $saveOfficies = Officies::create($request->all());
 
-        print_r( $request->all() );
-        print_r($saveOfficies);
+        return redirect('/view_officies');
     }
 
 }

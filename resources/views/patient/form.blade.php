@@ -158,13 +158,19 @@
                                           <input name="user_registration" id="user_registration" type="number" placeholder="Registro de usuário">
                                         <!--user_registration-->
 
+                                        
+                                    <select name="id_company" id="id_company">
+                                        <option value="2">compania2</option>
+                                        <option value="1">Compania1</option>
+                                    </select>
+
                                 </div>
 
                                     <div class="datapos">           
 
-                                      <!--Email-->
+                                    <!--Email-->
                                       <input name="email" id="email" type="mail" placeholder="Email">
-                                      <!--Email-->
+                                    <!--Email-->
                                       
                                     <!--phone-->
                                         <input name="phone_number" id="phone_number" type="number" placeholder="Telefone">
@@ -179,16 +185,12 @@
                                     <!--state-->
 
                                     <!--city-->  
-                                    <input name="city" id="city" type="text" placeholder="Cidade">
+                                        <input name="city" id="city" type="text" placeholder="Cidade">
                                     <!--city-->
 
                                     <!--country-->  
-                                    <input name="country" id="country" type="text" placeholder="Pais">
+                                        <input name="country" id="country" type="text" placeholder="Pais">
                                     <!--country-->
-
-                                    <select name="id_company" id="id_company">
-                                        <option value="3">Compania1</option>
-                                    </select>
 
                                     </div>
                                                                             

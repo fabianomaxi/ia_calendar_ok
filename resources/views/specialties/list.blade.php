@@ -113,7 +113,7 @@
                         <div class="listed">
                             <div class="row">
                                 <div class="filters">
-                                <h4>Tempo</h4>
+                                <h4>Especialidades</h4>
                                     <ul class="list-unstyled">
                                         <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="highest to lowest"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></li>
                                         <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="lowest to highest"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></li>
@@ -125,34 +125,29 @@
                                             </select>
                                         </li>
                                         <span class="sla">
-                                          <a class="btn btn-green btn-small" href="show_times">Novo Cadastro</a>
+                                          <a class="btn btn-green btn-small" href="show_specialties">Novo Cadastro</a>
                                         </span>  
                                     </ul>
                                   </div>
                               </div>
 
-                 @foreach ($times as $time)
+                @foreach ($specialties as $specialty)
                     <div class="row">
                         <!--Item-->
                         <div class="col-lg-6">
                             <div class="item-meeting">
-                                <p>{{$time->day}}</p>
+                                <p>{{$specialty->name}}</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="item-meeting">
-                                <p>{{$time->start_time}}</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item-meeting">
-                                <p>{{$time->end_time}}</p>
+                                <p>{{$specialty->need_registered}}</p>
                             </div>
                         </div>
                         <!--Item-->
                     </div>
                 @endforeach
-
+                            
                         <!--Aside-->
                         <aside>
                             <div class="elements-aside gray-color">

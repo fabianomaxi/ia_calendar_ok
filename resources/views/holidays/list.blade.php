@@ -125,33 +125,29 @@
                                             </select>
                                         </li>
                                         <span class="sla">
-                                          <a class="btn btn-green btn-small" href="#">Novo Cadastro</a>
+                                          <a class="btn btn-green btn-small" href="show_holidays">Novo Cadastro</a>
                                         </span>  
                                     </ul>
                                   </div>
                               </div>
 
-
-
-                            <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>oiiiiiiiiiiiiiiiiiioooooooooooo</p>
-                                    </div>
+                    @foreach ($holidays as $holiday)
+                        <div class="row">
+                            <!--Item-->
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$holiday->title}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
-
-                            <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>CHAMAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-                                    </div>
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$holiday->date}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
+                            <!--Item-->
+                        </div>
+                    @endforeach
+
                         </div>
 
                         <!--Aside-->

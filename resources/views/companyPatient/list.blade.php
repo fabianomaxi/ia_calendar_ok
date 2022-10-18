@@ -113,7 +113,7 @@
                         <div class="listed">
                             <div class="row">
                                 <div class="filters">
-                                <h4>Especialidades</h4>
+                                <h4>Companias Pacientes</h4>
                                     <ul class="list-unstyled">
                                         <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="highest to lowest"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></li>
                                         <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="lowest to highest"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></li>
@@ -125,33 +125,29 @@
                                             </select>
                                         </li>
                                         <span class="sla">
-                                          <a class="btn btn-green btn-small" href="#">Novo Cadastro</a>
+                                          <a class="btn btn-green btn-small" href="show_companyPatient">Novo Cadastro</a>
                                         </span>  
                                     </ul>
                                   </div>
                               </div>
 
-
-
+                        @foreach ($companyPatient as $companyPatient)
                             <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>oiiiiiiiiiiiiiiiiiioooooooooooo</p>
-                                    </div>
+                            <!--Item-->
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$companyPatient->id_patient}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$companyPatient->id_company}}</p>
+                                </div>
+                            </div>
+                            <!--Item-->
+                            </div>            
+                        @endforeach
 
-                            <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>CHAMAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-                                    </div>
-                                </div>
-                                <!--Item-->
-                            </div>
                         </div>
 
                         <!--Aside-->

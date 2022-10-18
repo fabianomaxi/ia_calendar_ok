@@ -10,18 +10,14 @@ class SpecialtiesController extends Controller
     public function view()
     {
 
-        $especialidades = Specialties::all();
-
-        // print_r($especialidades);
-        // exit;
-
+        $specialties = Specialties::all();
         
-        return view('/specialities/list');
+        return view('/specialties/list',['specialties' => $specialties]);
     }
 
     public function show()
     {
-        return view('/specialities/form');
+        return view('/specialties/form');
     }
 
     public function saveSpecialties(Request $request)

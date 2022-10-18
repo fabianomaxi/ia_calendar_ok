@@ -14,6 +14,6 @@ class Patient extends Model
     public $timestamps = false ;
     protected $table = 'patient';
 
-    protected $fillable = ['id_patient','name','email','phone_number','gender','cell_phone','cep','birthdate','city','state','district','street','country','dt_registration','user_registration'];
+    protected $fillable = ['id_patient','name','email','phone_number','gender','cell_phone','cep','birthdate','city','state','district','street','country','dt_registration','user_registration', 'id_company'];
 
 }

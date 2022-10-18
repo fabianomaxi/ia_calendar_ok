@@ -9,12 +9,9 @@ class PatientController extends Controller
 {
     public function view()
     {
-        $pacientes = Patient::all();
+        $patient = Patient::all();
 
-        // print_r($pacientes);
-        // exit;
-
-        return view('/patient/list');
+        return view('/patient/list',['patient' => $patient]);
     }
 
     public function show()
@@ -26,8 +23,7 @@ class PatientController extends Controller
     {
         $savePatient = Patient::create($request->all());
 
-        print_r( $request->all() );
-        print_r($savePatient);
+        return redirect('/view_patient');
     }
 
 }

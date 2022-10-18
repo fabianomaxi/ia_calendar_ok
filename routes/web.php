@@ -27,7 +27,7 @@ Route::get('/exit', 'App\Http\Controllers\UsersController@exit');
 # usuarios
 Route::get('/view_users', 'App\Http\Controllers\UsersController@view');
 Route::get('/show_users', 'App\Http\Controllers\UsersController@show');
-Route::post('/save_users', 'App\Http\Controllers\UsersController@save');
+Route::post('/save_users', 'App\Http\Controllers\UsersController@saveUsers');
 
 # officies
 Route::get('/view_officies', 'App\Http\Controllers\OfficiesController@view');
@@ -54,10 +54,10 @@ Route::get('/view_specialties', 'App\Http\Controllers\SpecialtiesController@view
 Route::get('/show_specialties', 'App\Http\Controllers\SpecialtiesController@show');
 Route::post('/save_specialties', 'App\Http\Controllers\SpecialtiesController@saveSpecialties');
 
-# patients
-Route::get('/view_patient', 'App\Http\Controllers\PatientsController@view');
-Route::get('/show_patient', 'App\Http\Controllers\PatientsController@show');
-Route::post('/save_patient', 'App\Http\Controllers\PatientsController@savePatient');
+# patient
+Route::get('/view_patient', 'App\Http\Controllers\PatientController@view');
+Route::get('/show_patient', 'App\Http\Controllers\PatientController@show');
+Route::post('/save_patient', 'App\Http\Controllers\PatientController@savePatient');
 
 # holidays
 Route::get('/view_holidays', 'App\Http\Controllers\HolidaysController@view');
@@ -67,4 +67,4 @@ Route::post('/save_holidays', 'App\Http\Controllers\HolidaysController@saveHolid
 # companyPatients
 Route::get('/view_companyPatient', 'App\Http\Controllers\CompanyPatientController@view');
 Route::get('/show_companyPatient', 'App\Http\Controllers\CompanyPatientController@show');
-Route::post('/save_companyPatient', 'App\Http\Controllers\CompanyPatientController@save');
+Route::post('/save_companyPatient', 'App\Http\Controllers\CompanyPatientController@saveCompanyPatient');

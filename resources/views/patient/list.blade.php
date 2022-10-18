@@ -125,33 +125,39 @@
                                             </select>
                                         </li>
                                         <span class="sla">
-                                          <a class="btn btn-green btn-small" href="#">Novo Cadastro</a>
+                                          <a class="btn btn-green btn-small" href="show_patient">Novo Cadastro</a>
                                         </span>  
                                     </ul>
                                   </div>
                               </div>
 
-
-
-                            <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>oiiiiiiiiiiiiiiiiiioooooooooooo</p>
-                                    </div>
+                    @foreach ($patient as $patient)
+                        <div class="row">
+                            <!--Item-->
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$patient->name}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
-
-                            <div class="row">
-                                <!--Item-->
-                                <div class="col-lg-12">
-                                    <div class="item-meeting">
-                                        <p>CHAMAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-                                    </div>
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$patient->email}}</p>
                                 </div>
-                                <!--Item-->
                             </div>
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$patient->phone_number}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item-meeting">
+                                    <p>{{$patient->gender}}</p>
+                                </div>
+                            </div>
+                            <!--Item-->
+                        </div>
+                    @endforeach
+
                         </div>
 
                         <!--Aside-->

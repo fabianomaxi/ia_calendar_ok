@@ -9,12 +9,9 @@ class ProfessionalsController extends Controller
 {
     public function view()
     {
-        $profissionais = Professionals::all();
+        $professionals = Professionals::all();
 
-        // print_r($profissionais);
-        // exit;
-
-        return view('/professionals/list');
+        return view('/professionals/list',['professionals' => $professionals]);
     }
 
     public function show()
@@ -26,8 +23,7 @@ class ProfessionalsController extends Controller
     {
         $saveProfessionals = Professionals::create($request->all());
 
-        print_r( $request->all() );
-        print_r($saveProfessionals);
+        return redirect('/view_professionals');
     }
 
 }

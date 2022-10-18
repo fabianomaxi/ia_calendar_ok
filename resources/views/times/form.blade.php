@@ -138,8 +138,8 @@
                                         <!--start_time-->
 
                                         <select name="id_company" id="id_company">
-                                            <option value="2">Compania</option>
-                                            <option value="4">Compania1</option>
+                                            <option value="2">compania2</option>
+                                            <option value="1">Compania1</option>
                                         </select>
                                     
                                 </div>
@@ -155,7 +155,7 @@
                                         <!--interval-->
 
                                         <select name="id_professionals" id="id_professionals">
-                                            <option>Profissional</option>
+                                            <option value="2">Profissional2</option>
                                             <option value="1">Profissional1</option>
                                         </select>
 

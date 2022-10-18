@@ -9,9 +9,9 @@ class CompaniesController extends Controller
 {
     public function view()
     {
-        $compania = Companies::all();
+        $companies = Companies::all();
 
-        return view('/companies/list');
+        return view('/companies/list',['companies' => $companies]);
     }
 
     public function show()
@@ -25,8 +25,6 @@ class CompaniesController extends Controller
 
         return redirect('/view_companies');
 
-        // print_r( $request->all() );
-        // print_r($savecompanies);
     }
 
 }

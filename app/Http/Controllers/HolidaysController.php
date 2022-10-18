@@ -10,12 +10,9 @@ class HolidaysController extends Controller
 {
     public function view()
     {
-        $feriado = Holidays::all();
+        $holidays = Holidays::all(); 
 
-        // print_r($feriado);
-        // exit;
-
-        return view('/holidays/list');
+        return view('/holidays/list',['holidays' => $holidays]);
     }
 
     public function show()
@@ -27,8 +24,7 @@ class HolidaysController extends Controller
     {
         $saveHolidays = Holidays::create($request->all());
 
-        print_r( $request->all() );
-        print_r($saveHolidays);
+        return redirect('/view_holidays');
     }
 
 }
