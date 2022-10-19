@@ -26,4 +26,20 @@ class ProfessionalsController extends Controller
         return redirect('/view_professionals');
     }
 
+    public function delete(Request $request)
+    {
+        $professionals = Professionals::find($request->id);
+
+        $checkExist = Professionals::where('id_specialty',$request->id)->first();
+
+        if( $checkExist ) {
+            echo "Não foi possivel deletar pois existe uma associação" ;
+            exit;
+            }
+
+        $professionals->delete();
+
+        return redirect('view_professionals');
+    }
+
 }

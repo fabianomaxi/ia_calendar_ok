@@ -26,4 +26,13 @@ class PatientController extends Controller
         return redirect('/view_patient');
     }
 
+    public function delete(Request $request)
+    {
+        $patient = Patient::find($request->id);
+
+        $patient->delete();
+
+        return redirect('view_patient');
+    }
+
 }

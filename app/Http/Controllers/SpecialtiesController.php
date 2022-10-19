@@ -24,10 +24,17 @@ class SpecialtiesController extends Controller
     {
         $saveSpecialties = Specialties::create($request->all());
 
-        return redirect('/view_officies');
+        return redirect('/view_specialties');
         
-        // print_r( $request->all() );
-        // print_r($saveSpecialties);
+    }
+
+    public function delete(Request $request)
+    {
+        $specialties = Specialties::find($request->id);
+
+        $specialties->delete();
+
+        return redirect('view_specialties');
     }
 
 }

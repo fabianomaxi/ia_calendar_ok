@@ -131,18 +131,19 @@
                                   </div>
                               </div>
 
-                        @foreach ($companies as $companies)
+                        @foreach ($companies as $company)
                             <div class="row">
                             <!--Item-->
                             <div class="col-lg-6">
                                 <div class="item-meeting">
-                                    <p>{{$companies->name}}</p>
+                                    <p>{{$company->name}}</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="item-meeting">
-                                    <p>{{$companies->email}}</p>
+                                    <p>{{$company->email}}</p>
                                 </div>
+                                <a href="delete-companies/{{$company->id_company}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                             </div>
                             <!--Item-->
                             </div>            

@@ -27,4 +27,13 @@ class CompaniesController extends Controller
 
     }
 
+    public function delete(Request $request)
+    {
+        $companies = Companies::find($request->id);
+
+        $companies->delete();
+
+        return redirect('view_companies');
+    }
+
 }

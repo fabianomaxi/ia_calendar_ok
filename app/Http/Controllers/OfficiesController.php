@@ -27,4 +27,13 @@ class OfficiesController extends Controller
         return redirect('/view_officies');
     }
 
+    public function delete(Request $request)
+    {
+        $officies = Officies::find($request->id);
+
+        $officies->delete();
+
+        return redirect('view_officies');
+    }
+
 }

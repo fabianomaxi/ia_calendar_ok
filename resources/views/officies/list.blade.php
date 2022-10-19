@@ -143,6 +143,7 @@
                                 <div class="item-meeting">
                                     <p>{{$office->description}}</p>
                                 </div>
+                                <a href="delete-officies/{{$office->id_office}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                             </div>
                             <!--Item-->
                         </div>

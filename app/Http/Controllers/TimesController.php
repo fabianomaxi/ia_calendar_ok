@@ -27,5 +27,14 @@ class TimesController extends Controller
 
     }
 
+    public function delete(Request $request)
+    {
+        $times = Times::find($request->id);
+
+        $times->delete();
+
+        return redirect('view_times');
+    }
+
 }
 

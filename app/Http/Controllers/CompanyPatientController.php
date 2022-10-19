@@ -27,4 +27,13 @@ class CompanyPatientController extends Controller
 
     }
 
+    public function delete(Request $request)
+    {
+        $companyPatient = CompanyPatient::find($request->id);
+
+        $companyPatient->delete();
+
+        return redirect('view_companyPatient');
+    }
+
 }

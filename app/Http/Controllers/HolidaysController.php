@@ -27,4 +27,13 @@ class HolidaysController extends Controller
         return redirect('/view_holidays');
     }
 
+    public function delete(Request $request)
+    {
+        $holidays = Holidays::find($request->id);
+
+        $holidays->delete();
+
+        return redirect('view_holidays');
+    }
+
 }

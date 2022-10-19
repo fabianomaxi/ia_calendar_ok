@@ -143,6 +143,7 @@
                                 <div class="item-meeting">
                                     <p>{{$companyPatient->id_company}}</p>
                                 </div>
+                                <a href="delete-companyPatient/{{$companyPatient->id_company_patient}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                             </div>
                             <!--Item-->
                             </div>            

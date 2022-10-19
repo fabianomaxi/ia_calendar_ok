@@ -131,23 +131,24 @@
                                   </div>
                               </div>
 
-                    @foreach ($professionals as $professional)
+                    @foreach ($professionals as $professionals)
                         <div class="row">
                             <!--Item-->
                             <div class="col-lg-6">
                                 <div class="item-meeting">
-                                    <p>{{$professional->name}}</p>
+                                    <p>{{$professionals->name}}</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="item-meeting">
-                                    <p>{{$professional->email}}</p>
+                                    <p>{{$professionals->email}}</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="item-meeting">
-                                    <p>{{$professional->phone_number}}</p>
+                                    <p>{{$professionals->phone_number}}</p>
                                 </div>
+                                <a href="delete-professionals/{{$professionals->id_professionals}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                             </div>
                             <!--Item-->
                         </div>

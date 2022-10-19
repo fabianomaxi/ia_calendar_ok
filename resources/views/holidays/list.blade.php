@@ -143,6 +143,7 @@
                                 <div class="item-meeting">
                                     <p>{{$holiday->date}}</p>
                                 </div>
+                                <a href="delete-holidays/{{$holiday->id_holiday}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                             </div>
                             <!--Item-->
                         </div>

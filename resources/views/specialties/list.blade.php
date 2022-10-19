@@ -143,6 +143,7 @@
                             <div class="item-meeting">
                                 <p>{{$specialty->need_registered}}</p>
                             </div>
+                            <a href="delete-specialties/{{$specialty->id_specialty}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                         </div>
                         <!--Item-->
                     </div>

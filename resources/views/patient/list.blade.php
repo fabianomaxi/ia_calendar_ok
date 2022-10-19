@@ -153,6 +153,7 @@
                                 <div class="item-meeting">
                                     <p>{{$patient->gender}}</p>
                                 </div>
+                                <a href="delete-patient/{{$patient->id_patient}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                             </div>
                             <!--Item-->
                         </div>
