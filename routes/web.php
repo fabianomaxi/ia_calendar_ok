@@ -24,10 +24,11 @@ Route::get('/index', function () {
 Route::post('/valida-user', 'App\Http\Controllers\UsersController@loginIsValid');
 Route::get('/exit', 'App\Http\Controllers\UsersController@exit');
 
-# usuarios
+# users
 Route::get('/view_users', 'App\Http\Controllers\UsersController@view');
 Route::get('/show_users', 'App\Http\Controllers\UsersController@show');
 Route::post('/save_users', 'App\Http\Controllers\UsersController@saveUsers');
+Route::get('/delete-user/{id}', 'App\Http\Controllers\UsersController@delete');
 
 # officies
 Route::get('/view_officies', 'App\Http\Controllers\OfficiesController@view');

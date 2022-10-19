@@ -55,4 +55,13 @@ class UsersController extends Controller
 
     }
 
+    public function delete(Request $request)
+    {
+        $users = Users::find($request->id);
+
+        $users->delete();
+
+        return redirect('view_users');
+    }
+
 }

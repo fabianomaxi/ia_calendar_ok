@@ -149,23 +149,25 @@
 
                         </div>
 
-                      @foreach ($users as $users)
+                      @foreach ($users as $user)
                                       <div class="row">
                           <!--Item-->
                           <div class="col-lg-6">
                               <div class="item-meeting">
-                                  <p>{{$users->name}}</p>
+                                  <p>{{$user->name}}</p>
                               </div>
                           </div>
+                        <div>
                           <div class="col-lg-6">
                             <div class="item-meeting">
-                                <p>{{$users->email}}</p>
+                                <p>{{$user->email}}</p>
                             </div>
+                          </div>
+                          <a href="delete-user/{{$user->id_user}}"><button type="button" class="btn btn-danger">Deletar</button></a>
                         </div>
                           <!--Item-->
                       </div>
                     @endforeach    
-
                   </div>
 
                   <!--Aside-->

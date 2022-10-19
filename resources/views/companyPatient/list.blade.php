@@ -147,7 +147,7 @@
                             <!--Item-->
                             </div>            
                         @endforeach
-
+                            
                         </div>
 
                         <!--Aside-->
