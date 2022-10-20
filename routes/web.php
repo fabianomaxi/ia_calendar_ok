@@ -29,6 +29,8 @@ Route::get('/view_users', 'App\Http\Controllers\UsersController@view');
 Route::get('/show_users', 'App\Http\Controllers\UsersController@show');
 Route::post('/save_users', 'App\Http\Controllers\UsersController@saveUsers');
 Route::get('/delete-user/{id}', 'App\Http\Controllers\UsersController@delete');
+Route::post('/edit-user/{id}', 'App\Http\Controllers\UsersController@edit');
+Route::get('/show_users/{id}', 'App\Http\Controllers\UsersController@show');
 
 # officies
 Route::get('/view_officies', 'App\Http\Controllers\OfficiesController@view');

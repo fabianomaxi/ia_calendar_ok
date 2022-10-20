@@ -164,6 +164,7 @@
                             </div>
                           </div>
                           <a href="delete-user/{{$user->id_user}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                          <a href="show_users/{{$user->id_user}}"><button type="button" class="btn btn-edit">Editar</button></a>
                         </div>
                           <!--Item-->
                       </div>
