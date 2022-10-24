@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -130,14 +130,14 @@
                                 <div class="datapos">
 
                                         <!--name-->
-                                            <input name="name" id="name" type="text" placeholder="Nome">
+                                            <input value="{{$user->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
                                         <!--email-->
-                                            <input name="email" id="email" type="email" placeholder="email">
+                                            <input value="{{$user->email}}" name="email" id="email" type="email" placeholder="email">
                                         <!--email-->
 
-                                        <select name="id_company" id="id_company">
+                                        <select value="{{$user->id_company}}" name="id_company" id="id_company">
                                             <option value="2">Compania</option>
                                             <option value="1">Compania1</option>
                                         </select>
@@ -147,10 +147,10 @@
                                     <div class="datapos">           
 
                                         <!--password-->
-                                            <input name="password" id="password" type="password" placeholder="Senha">
+                                            <input value="{{$user->password}}" name="password" id="password" type="password" placeholder="Senha">
                                         <!--password-->
 
-                                        <select name="id_professionals" id="id_professionals">
+                                        <select value="{{$user->id_professionals}}" name="id_professionals" id="id_professionals">
                                             <option value="1">Profissional1</option>
                                             <option value="2">Profissional2</option>
                                         </select>

@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -130,11 +130,11 @@
                                     <div class="datapos">
 
                                         <!--name-->
-                                            <input name="name" id="name" type="text" placeholder="Nome">
+                                            <input value="{{$companies->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
                                         <!--owner-->
-                                            <input name="owner" id="owner" type="text" placeholder="Proprietário">
+                                            <input value="{{$companies->owner}}" name="owner" id="owner" type="text" placeholder="Proprietário">
                                         <!--owner-->
                                       
                                 </div>
@@ -142,11 +142,11 @@
                                     <div class="datapos">           
 
                                       <!--Email-->
-                                      <input name="email" id="email" type="mail" placeholder="Email">
+                                      <input value="{{$companies->email}}" name="email" id="email" type="mail" placeholder="Email">
                                       <!--Email-->
                                       
                                     <!--phone-->
-                                        <input name="phone_number" id="phone_number" type="number" placeholder="Telefone">
+                                        <input value="{{$companies->phone_number}}" name="phone_number" id="phone_number" type="number" placeholder="Telefone">
                                     <!--phone-->
                                     
                                     </div>

@@ -143,7 +143,8 @@
                                 <div class="item-meeting">
                                     <p>{{$holiday->date}}</p>
                                 </div>
-                                <a href="delete-holidays/{{$holiday->id_holiday}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                                <a href="delete_holidays/{{$holiday->id_holiday}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                                <a href="view_holidays/{{$holiday->id_holiday}}"><button type="button" class="btn btn-edit">Editar</button></a>
                             </div>
                             <!--Item-->
                         </div>

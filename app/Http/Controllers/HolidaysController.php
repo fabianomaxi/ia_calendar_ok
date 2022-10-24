@@ -36,4 +36,18 @@ class HolidaysController extends Controller
         return redirect('view_holidays');
     }
 
+    public function update(Request $request)
+    {
+        $holidays = Holidays::where('id_holidays', $request->id)->update($request->all());
+
+           
+    }
+    
+    public function edit(Request $request)
+    {
+        $holidays = Holidays::where('id_holiday', $request->id)->first();    
+
+        return view('holidays.form', ['holidays' => $holidays]);
+    }
+
 }

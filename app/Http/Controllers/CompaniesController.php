@@ -36,4 +36,18 @@ class CompaniesController extends Controller
         return redirect('view_companies');
     }
 
+    public function update(Request $request)
+    {
+        $companies = Companies::where('id_company', $request->id)->update($request->all());
+
+           
+    }
+    
+    public function edit(Request $request)
+    {
+        $companies = Companies::where('id_company', $request->id)->first();    
+
+        return view('companies.form', ['companies' => $companies]);
+    }
+
 }

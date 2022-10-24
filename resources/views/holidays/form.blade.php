@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -130,10 +130,10 @@
                                     <div class="datapos">
 
                                         <!--date-->
-                                            <input name="date" id="date" type="date" placeholder="Data">
+                                            <input value="{{$holidays->name}}" name="date" id="date" type="date" placeholder="Data">
                                         <!--date-->
 
-                                        <select name="id_company" id="id_company">
+                                        <select value="{{$holidays->id_company}}" name="id_company" id="id_company">
                                             <option>Compania</option>
                                             <option value="2">Compania1</option>
                                         </select>
@@ -143,11 +143,11 @@
                                     <div class="datapos">           
 
                                       <!--title-->
-                                      <input name="title" id="title" type="text" placeholder="Titulo">
+                                      <input value="{{$holidays->title}}" name="title" id="title" type="text" placeholder="Titulo">
                                       <!--title-->
                                       
                                     <!--recurrence-->
-                                        <input name="recurrence" id="recurrence" type="text" placeholder="Recorrência">
+                                        <input value="{{$holidays->recurrence}}" name="recurrence" id="recurrence" type="number" placeholder="Recorrência">
                                     <!--recurrence-->
 
                                     </div>

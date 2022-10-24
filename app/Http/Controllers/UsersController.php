@@ -64,16 +64,18 @@ class UsersController extends Controller
         return redirect('view_users');
     }
 
-    public function edit(Request $request)
+    public function update(Request $request)
     {
         $user = Users::where('id_user', $request->id)->update($request->all());
 
-        return redirect('view_users');
+           
     }
-
-    public function FunctionName(Request $request)
+    
+    public function edit(Request $request)
     {
-        $user = Users::select('id_user', $request->id);
+        $user = Users::where('id_user', $request->id)->first();    
+
+        return view('users.form', ['user' => $user]);
     }
 
 }

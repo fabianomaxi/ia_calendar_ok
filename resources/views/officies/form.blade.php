@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -130,10 +130,10 @@
                                     <div class="datapos">
 
                                         <!--name-->
-                                           <input name="name" id="name" type="text" placeholder="Nome">
+                                           <input value="{{$officies->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
-                                    <select name="id_company" id="id_company">
+                                    <select value="{{$officies->id_company}}" name="id_company" id="id_company">
                                         <option>Compania</option>
                                         <option value="2">compania2</option>
                                     </select>
@@ -143,7 +143,7 @@
                                     <div class="datapos">           
 
                                     <!--description-->
-                                        <input name="description" id="description" type="text" placeholder="Descrição">
+                                        <input value="{{$officies->description}}" name="description" id="description" type="text" placeholder="Descrição">
                                     <!--description-->
                                       
                                       
