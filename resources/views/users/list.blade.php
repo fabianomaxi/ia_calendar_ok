@@ -163,7 +163,7 @@
                                 <p>{{$user->email}}</p>
                             </div>
                           </div>
-                          <a href="delete_user/{{$user->id_user}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                          <a href="delete_user/{{$user->id_user}}" onclick="return confirm('Deseja deletar?')"><button type="button" class="btn btn-danger">Deletar</button></a>
                           <a href="view_users/{{$user->id_user}}"><button type="button" class="btn btn-edit">Editar</button></a>
                         </div>
                           <!--Item-->

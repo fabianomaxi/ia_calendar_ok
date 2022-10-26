@@ -143,7 +143,8 @@
                             <div class="item-meeting">
                                 <p>{{$specialty->need_registered}}</p>
                             </div>
-                            <a href="delete-specialties/{{$specialty->id_specialty}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                            <a href="delete_specialties/{{$specialty->id_specialty}}" onclick="return confirm('Deseja deletar?')"><button type="button" class="btn btn-danger">Deletar</button></a>
+                            <a href="view_specialties/{{$specialty->id_specialty}}"><button type="button" class="btn btn-edit">Editar</button></a>
                         </div>
                         <!--Item-->
                     </div>

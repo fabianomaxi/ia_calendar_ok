@@ -22,9 +22,21 @@ class HolidaysController extends Controller
 
     public function saveHolidays(Request $request)
     {
+    
+    $data = request()->except(['_token','id','btn_holidays']);
+
+    if($request->id){
+        
+        $holidays = Holidays::where('id_holiday', $request->id)->update($data);
+       
+    }else{
+
         $saveHolidays = Holidays::create($request->all());
 
+    }
+
         return redirect('/view_holidays');
+
     }
 
     public function delete(Request $request)
@@ -36,13 +48,6 @@ class HolidaysController extends Controller
         return redirect('view_holidays');
     }
 
-    public function update(Request $request)
-    {
-        $holidays = Holidays::where('id_holidays', $request->id)->update($request->all());
-
-           
-    }
-    
     public function edit(Request $request)
     {
         $holidays = Holidays::where('id_holiday', $request->id)->first();    

@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_times" method="POST" id="form_times" name="form_times">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,14 +131,14 @@
                                 <div class="datapos">
 
                                         <!--day-->
-                                            <input name="day" id="day" type="date" placeholder="Dia">
+                                            <input value="{{@$times->day}}" name="day" id="day" type="date" placeholder="Dia">
                                         <!--day-->
 
                                         <!--start_time-->
-                                            <input name="start_time" id="start_time" type="time" placeholder="Hora de início">
+                                            <input value="{{@$times->start_time}}" name="start_time" id="start_time" type="time" placeholder="Hora de início">
                                         <!--start_time-->
 
-                                        <select name="id_company" id="id_company">
+                                        <select value="{{@$times->id_company}}" name="id_company" id="id_company">
                                             <option value="2">compania2</option>
                                             <option value="1">Compania1</option>
                                         </select>
@@ -147,14 +148,14 @@
                                     <div class="datapos">           
 
                                         <!--end_time-->
-                                            <input name="end_time" id="end_time" type="time" placeholder="Fim do tempo">
+                                            <input value="{{@$times->end_time}}" name="end_time" id="end_time" type="time" placeholder="Fim do tempo">
                                         <!--end_time-->
                                       
                                         <!--interval-->
-                                            <input name="interval" id="interval" type="number" placeholder="Intervalo">
+                                            <input value="{{@$times->interval}}" name="interval" id="interval" type="number" placeholder="Intervalo">
                                         <!--interval-->
 
-                                        <select name="id_professionals" id="id_professionals">
+                                        <select value="{{@$times->id_professionals}}" name="id_professionals" id="id_professionals">
                                             <option value="2">Profissional2</option>
                                             <option value="1">Profissional1</option>
                                         </select>

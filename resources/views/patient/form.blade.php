@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_patient" method="POST" id="form_patient" name="form_patient">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,16 +131,16 @@
                                     <div class="datapos">
 
                                         <!--name-->
-                                            <input name="name" id="name" type="text" placeholder="Nome">
+                                            <input value="{{@$patient->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
                                         <!--birthdate-->
-                                        <input name="birthdate" id="birthdate" type="date" placeholder="data de nascimento">
+                                        <input value="{{@$patient->birthdate}}" name="birthdate" id="birthdate" type="date" placeholder="data de nascimento">
                                         <!--birthdate-->
 
 
                                         <!--gender-->
-                                        <select name="gender" id="gender">
+                                        <select value="{{@$patient->gender}}" name="gender" id="gender">
                                           <option value="F">Feminino</option>
                                           <option value="M">Masculino</option>
                                         </select>
@@ -147,19 +148,19 @@
 
                                         
                                         <!--cep-->
-                                        <input name="cep" id="cep" type="cep" placeholder="cep">
+                                        <input value="{{@$patient->cep}}" name="cep" id="cep" type="cep" placeholder="cep">
                                         <!--cep-->
 
                                         <!--street-->
-                                        <input name="street" id="street" type="text" placeholder="Rua">
+                                        <input value="{{@$patient->street}}" name="street" id="street" type="text" placeholder="Rua">
                                         <!--street-->
 
                                         <!--user_registration-->  
-                                          <input name="user_registration" id="user_registration" type="number" placeholder="Registro de usuário">
+                                          <input value="{{@$patient->user_registration}}" name="user_registration" id="user_registration" type="number" placeholder="Registro de usuário">
                                         <!--user_registration-->
 
                                         
-                                    <select name="id_company" id="id_company">
+                                    <select value="{{@$patient->id_company}}" name="id_company" id="id_company">
                                         <option value="2">compania2</option>
                                         <option value="1">Compania1</option>
                                     </select>
@@ -169,27 +170,27 @@
                                     <div class="datapos">           
 
                                     <!--Email-->
-                                      <input name="email" id="email" type="mail" placeholder="Email">
+                                      <input value="{{@$patient->email}}" name="email" id="email" type="mail" placeholder="Email">
                                     <!--Email-->
                                       
                                     <!--phone-->
-                                        <input name="phone_number" id="phone_number" type="number" placeholder="Telefone">
+                                        <input value="{{@$patient->phone_number}}" name="phone_number" id="phone_number" type="number" placeholder="Telefone">
                                     <!--phone-->
 
                                     <!--district-->  
-                                      <input name="district" id="district" type="text" placeholder="Distrito">
+                                      <input value="{{@$patient->district}}" name="district" id="district" type="text" placeholder="Distrito">
                                     <!--district-->  
 
                                     <!--state-->  
-                                      <input name="state" id="state" type="text" placeholder="Estado">
+                                      <input value="{{@$patient->state}}" name="state" id="state" type="text" placeholder="Estado">
                                     <!--state-->
 
                                     <!--city-->  
-                                        <input name="city" id="city" type="text" placeholder="Cidade">
+                                        <input value="{{@$patient->city}}" name="city" id="city" type="text" placeholder="Cidade">
                                     <!--city-->
 
                                     <!--country-->  
-                                        <input name="country" id="country" type="text" placeholder="Pais">
+                                        <input value="{{@$patient->country}}" name="country" id="country" type="text" placeholder="Pais">
                                     <!--country-->
 
                                     </div>

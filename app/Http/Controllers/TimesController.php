@@ -21,7 +21,18 @@ class TimesController extends Controller
 
     public function saveTimes(Request $request)
     {
+    
+    $data = request()->except(['_token','id','btn_times']);
+
+    if($request->id){
+        
+        $times = Times::where('id_time', $request->id)->update($data);
+       
+    }else{
+
         $saveTimes = Times::create($request->all());
+
+    }
 
         return redirect('/view_times');
 
@@ -34,6 +45,13 @@ class TimesController extends Controller
         $times->delete();
 
         return redirect('view_times');
+    }
+
+    public function edit(Request $request)
+    {
+        $times = Times::where('id_time', $request->id)->first();    
+
+        return view('times.form', ['times' => $times]);
     }
 
 }

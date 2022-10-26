@@ -143,7 +143,7 @@
                                 <div class="item-meeting">
                                     <p>{{$company->email}}</p>
                                 </div>
-                                <a href="delete_companies/{{$company->id_company}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                                <a href="delete_companies/{{$company->id_company}}" onclick="return confirm('Deseja deletar?')"><button type="button" class="btn btn-danger">Deletar</button></a>
                                 <a href="view_companies/{{$company->id_company}}"><button type="button" class="btn btn-edit">Editar</button></a>
                             </div>
                             <!--Item-->

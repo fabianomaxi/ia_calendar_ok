@@ -148,7 +148,8 @@
                                 <div class="item-meeting">
                                     <p>{{$professionals->phone_number}}</p>
                                 </div>
-                                <a href="delete-professionals/{{$professionals->id_professionals}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                                <a href="delete_professionals/{{$professionals->id_professionals}}" onclick="return confirm('Deseja deletar?')"><button type="button" class="btn btn-danger">Deletar</button></a>
+                                <a href="view_professionals/{{$professionals->id_professionals}}"><button type="button" class="btn btn-edit">Editar</button></a>
                             </div>
                             <!--Item-->
                         </div>

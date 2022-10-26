@@ -49,7 +49,18 @@ class UsersController extends Controller
 
     public function saveUsers(Request $request)
     {
+    
+    $data = request()->except(['_token','id','btn_users']);
+
+    if($request->id){
+        
+        $user = Users::where('id_user', $request->id)->update($data);
+       
+    }else{
+
         $saveUsers = Users::create($request->all());
+
+    }
 
         return redirect('/view_users');
 
@@ -64,13 +75,6 @@ class UsersController extends Controller
         return redirect('view_users');
     }
 
-    public function update(Request $request)
-    {
-        $user = Users::where('id_user', $request->id)->update($request->all());
-
-           
-    }
-    
     public function edit(Request $request)
     {
         $user = Users::where('id_user', $request->id)->first();    

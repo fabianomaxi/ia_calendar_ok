@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_officies" method="POST" id="form_officies" name="form_officies">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,11 +131,11 @@
                                     <div class="datapos">
 
                                         <!--name-->
-                                           <input value="{{$officies->name}}" name="name" id="name" type="text" placeholder="Nome">
+                                           <input value="{{@$officies->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
-                                    <select value="{{$officies->id_company}}" name="id_company" id="id_company">
-                                        <option>Compania</option>
+                                    <select value="{{@$officies->id_company}}" name="id_company" id="id_company">
+                                        <option value="1">Compania</option>
                                         <option value="2">compania2</option>
                                     </select>
                                     
@@ -143,7 +144,7 @@
                                     <div class="datapos">           
 
                                     <!--description-->
-                                        <input value="{{$officies->description}}" name="description" id="description" type="text" placeholder="Descrição">
+                                        <input value="{{@$officies->description}}" name="description" id="description" type="text" placeholder="Descrição">
                                     <!--description-->
                                       
                                       

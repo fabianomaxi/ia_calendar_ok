@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_users" method="POST" id="form_users" name="form_users">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,14 +131,14 @@
                                 <div class="datapos">
 
                                         <!--name-->
-                                            <input value="{{$user->name}}" name="name" id="name" type="text" placeholder="Nome">
+                                            <input value="{{@$user->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
                                         <!--email-->
-                                            <input value="{{$user->email}}" name="email" id="email" type="email" placeholder="email">
+                                            <input value="{{@$user->email}}" name="email" id="email" type="email" placeholder="email">
                                         <!--email-->
 
-                                        <select value="{{$user->id_company}}" name="id_company" id="id_company">
+                                        <select value="{{@$user->id_company}}" name="id_company" id="id_company">
                                             <option value="2">Compania</option>
                                             <option value="1">Compania1</option>
                                         </select>
@@ -147,10 +148,10 @@
                                     <div class="datapos">           
 
                                         <!--password-->
-                                            <input value="{{$user->password}}" name="password" id="password" type="password" placeholder="Senha">
+                                            <input value="{{@$user->password}}" name="password" id="password" type="password" placeholder="Senha">
                                         <!--password-->
 
-                                        <select value="{{$user->id_professionals}}" name="id_professionals" id="id_professionals">
+                                        <select value="{{@$user->id_professionals}}" name="id_professionals" id="id_professionals">
                                             <option value="1">Profissional1</option>
                                             <option value="2">Profissional2</option>
                                         </select>

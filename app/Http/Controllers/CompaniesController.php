@@ -21,7 +21,18 @@ class CompaniesController extends Controller
 
     public function saveCompanies(Request $request)
     {
+    
+    $data = request()->except(['_token','id','btn_companies']);
+
+    if($request->id){
+        
+        $companies = Companies::where('id_company', $request->id)->update($data);
+       
+    }else{
+
         $saveCompanies = Companies::create($request->all());
+
+    }
 
         return redirect('/view_companies');
 
@@ -34,13 +45,6 @@ class CompaniesController extends Controller
         $companies->delete();
 
         return redirect('view_companies');
-    }
-
-    public function update(Request $request)
-    {
-        $companies = Companies::where('id_company', $request->id)->update($request->all());
-
-           
     }
     
     public function edit(Request $request)

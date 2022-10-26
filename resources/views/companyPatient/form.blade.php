@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_companyPatient" method="POST" id="form_companyPatient" name="form_companyPatient">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -129,7 +130,7 @@
                                     <hr>
                                     <div class="datapos">
 
-                                    <select name="id_company" id="id_company">
+                                    <select value="{{@$companyPatient->id_company}}" name="id_company" id="id_company">
                                         <option value="2">Compania1</option>
                                         <option value="1">Compania2</option>
                                     </select>
@@ -138,7 +139,7 @@
 
                                     <div class="datapos">           
 
-                                        <select name="id_patient" id="id_patient">
+                                        <select value="{{@$companyPatient->id_patient}}" name="id_patient" id="id_patient">
                                             <option value="1">Pacientes1</option>
                                             <option value="2">Pacientes2</option>
                                         </select>

@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_specialties" method="POST" id="form_specialties" name="form_specialties">
                                 @csrf   
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,11 +131,11 @@
                                     <div class="datapos">
 
                                         <!--name-->
-                                            <input name="name" id="name" type="text" placeholder="Nome">
+                                            <input value="{{@$specialties->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
-                                    <select name="id_company" id="id_company">
-                                        <option>Compania</option>
+                                    <select value="{{@$specialties->id_company}} "name="id_company" id="id_company">
+                                        <option value="1">Compania</option>
                                         <option value="2">compania2</option>
                                     </select>
                                     
@@ -143,7 +144,7 @@
                                     <div class="datapos">           
   
                                     <!--need_registered-->
-                                        <select name="need_registered" id="need_registered">
+                                        <select value="{{@$specialties->need_registered}}" name="need_registered" id="need_registered">
                                           <option>Precisa de resgistro?</option>
                                           <option value="1">Sim</option>
                                           <option value="0">Não</option>

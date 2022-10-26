@@ -11,7 +11,7 @@
         <meta name="robots" content=""/>
         <meta name="googlebot" content=""/>
         <meta name="google" content="nositelinkssearchbox"/>
-        <link href="css/styles.css" rel="stylesheet" media="screen">
+        <link href="/css/styles.css" rel="stylesheet" media="screen">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
     </head>
 
@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_professionals" method="POST" id="form_professionals" name="form_professionals">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,16 +131,16 @@
                                     <div class="datapos">
 
                                     <!--name-->
-                                        <input name="name" id="name" type="text" placeholder="Nome">
+                                        <input value="{{@$professionals->name}}" name="name" id="name" type="text" placeholder="Nome">
                                     <!--name-->                                    
                                         
                                       <!--Email-->
-                                         <input name="email" id="email" type="mail" placeholder="Email">
+                                         <input value="{{@$professionals->email}}" name="email" id="email" type="mail" placeholder="Email">
                                       <!--Email-->
 
                                     <!--id_specialties-->
-                                        <select name="id_specialty" id="id_specialty">
-                                            <option>Especialidades</option>
+                                        <select value="{{@$professionals->id_specialty}}" name="id_specialty" id="id_specialty">
+                                            <option value="5">Especialidades</option>
                                             <option value="1">Especialidades1</option>
                                         </select>
                                     <!--id_specialties-->
@@ -149,19 +150,19 @@
                                     <div class="datapos">                                                 
 
                                     <!--phone-->
-                                        <input name="phone_number" id="phone_number" type="number" placeholder="Telefone">
+                                        <input value="{{@$professionals->phone_number}}" name="phone_number" id="phone_number" type="number" placeholder="Telefone">
                                     <!--phone-->
 
                                     <!--id_company-->
-                                        <select name="id_company" id="id_company">
-                                            <option>Compania</option>
+                                        <select value="{{@$professionals->id_company}}" name="id_company" id="id_company">
+                                            <option value="1">Compania</option>
                                             <option value="2">Compania1</option>
                                         </select>
                                     <!--id_company-->
 
                                     <!--id_office-->
-                                        <select name="id_office" id="id_office">
-                                            <option>Escritorio</option>
+                                        <select value="{{@$professionals->id_office}}" name="id_office" id="id_office">
+                                            <option value="2">Escritorio</option>
                                             <option value="1">Escritorio1</option>
                                         </select>
                                     <!--id_office-->

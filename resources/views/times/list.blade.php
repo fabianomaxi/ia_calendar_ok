@@ -148,7 +148,8 @@
                             <div class="item-meeting">
                                 <p>{{$time->end_time}}</p>
                             </div>
-                            <a href="delete-times/{{$time->id_time}}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                            <a href="delete_times/{{$time->id_time}}" onclick="return confirm('Deseja deletar?')"><button type="button" class="btn btn-danger">Deletar</button></a>
+                            <a href="view_times/{{$time->id_time}}"><button type="button" class="btn btn-edit">Editar</button></a>
                         </div>
                         <!--Item-->
                     </div>

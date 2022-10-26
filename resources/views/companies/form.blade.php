@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_companies" method="POST" id="form_companies" name="form_companies"> 
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,11 +131,11 @@
                                     <div class="datapos">
 
                                         <!--name-->
-                                            <input value="{{$companies->name}}" name="name" id="name" type="text" placeholder="Nome">
+                                            <input value="{{@$companies->name}}" name="name" id="name" type="text" placeholder="Nome">
                                         <!--name-->
 
                                         <!--owner-->
-                                            <input value="{{$companies->owner}}" name="owner" id="owner" type="text" placeholder="Proprietário">
+                                            <input value="{{@$companies->owner}}" name="owner" id="owner" type="text" placeholder="Proprietário">
                                         <!--owner-->
                                       
                                 </div>
@@ -142,11 +143,11 @@
                                     <div class="datapos">           
 
                                       <!--Email-->
-                                      <input value="{{$companies->email}}" name="email" id="email" type="mail" placeholder="Email">
+                                      <input value="{{@$companies->email}}" name="email" id="email" type="mail" placeholder="Email">
                                       <!--Email-->
                                       
                                     <!--phone-->
-                                        <input value="{{$companies->phone_number}}" name="phone_number" id="phone_number" type="number" placeholder="Telefone">
+                                        <input value="{{@$companies->phone_number}}" name="phone_number" id="phone_number" type="number" placeholder="Telefone">
                                     <!--phone-->
                                     
                                     </div>

@@ -122,6 +122,7 @@
                         <div class="form-login">
                             <form action="/save_holidays" id="form_holidays" method="POST" name="form_holidays">
                                 @csrf
+                                <input type="hidden" name="id" value="{{@request()->id}}">
                                 <!--Personal Information-->
                                 <div class="row">
 
@@ -130,11 +131,11 @@
                                     <div class="datapos">
 
                                         <!--date-->
-                                            <input value="{{$holidays->name}}" name="date" id="date" type="date" placeholder="Data">
+                                            <input value="{{@$holidays->name}}" name="date" id="date" type="date" placeholder="Data">
                                         <!--date-->
 
-                                        <select value="{{$holidays->id_company}}" name="id_company" id="id_company">
-                                            <option>Compania</option>
+                                        <select value="{{@$holidays->id_company}}" name="id_company" id="id_company">
+                                            <option value="1">Compania</option>
                                             <option value="2">Compania1</option>
                                         </select>
                                      
@@ -143,11 +144,11 @@
                                     <div class="datapos">           
 
                                       <!--title-->
-                                      <input value="{{$holidays->title}}" name="title" id="title" type="text" placeholder="Titulo">
+                                      <input value="{{@$holidays->title}}" name="title" id="title" type="text" placeholder="Titulo">
                                       <!--title-->
                                       
                                     <!--recurrence-->
-                                        <input value="{{$holidays->recurrence}}" name="recurrence" id="recurrence" type="number" placeholder="Recorrência">
+                                        <input value="{{@$holidays->recurrence}}" name="recurrence" id="recurrence" type="number" placeholder="Recorrência">
                                     <!--recurrence-->
 
                                     </div>
